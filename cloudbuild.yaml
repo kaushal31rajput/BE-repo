@@ -1,3 +1,4 @@
+steps:
   ## Build the container image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'europe-west3-docker.pkg.dev/load-balancer-452617/backend/backend-01:$COMMIT_SHA', '.']
