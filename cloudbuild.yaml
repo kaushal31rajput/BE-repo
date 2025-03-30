@@ -1,7 +1,7 @@
   ## Build the container image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'europe-west3-docker.pkg.dev/${_IMAGE_PROJECTID}/${_REGISTRY}/${_ENV}-backend-euwest3-01:$COMMIT_SHA', '.']
+    args: ['build', '-t', 'europe-west3-docker.pkg.dev/load-balancer-452617/${_REGISTRY}/backend-01:$COMMIT_SHA', '.']
 
   # Push the container image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'europe-west3-docker.pkg.dev/${_IMAGE_PROJECTID}/${_REGISTRY}/${_ENV}-backend-euwest3-01:$COMMIT_SHA']
+    args: ['push', 'europe-west3-docker.pkg.dev/load-balancer-452617/${_REGISTRY}/backend-01:$COMMIT_SHA']
